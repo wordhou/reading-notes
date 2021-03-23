@@ -34,3 +34,41 @@ Interestingly the language makes a design choice to not have any primitive unsig
 # Documentation
 
 The Oracle Java docs are an indispensable resource. They can be searched, and give all method signatures and explanations about the classes and methods in the java standard library.
+
+# Imports
+
+Classes that are defined outside of the current directory need to be imported to be used. Imports are done through an import statement:
+
+```
+import Java.util.ArrayList;
+```
+
+In an IDE, imports are usually handled automatically for the user.
+
+# Arrays
+
+The array type in Java is declared by the base type followed by an empty pair of square brackets. For instance: `int[] arrayName = {1,2,3}`. In this example we are initializing the array with an array literal, which contains the initial values of the array between curly braces.
+
+Arrays are initialized with a fixed length. Arrays in Java keep track of their own length via the `.length` property. This is a read-only property that initialized at runtime. This is to be contrasted with `C`-like languages where arrays in memory are just pointers to the starting location of the array in memory. What this means in practice is that methods that perform operations on arrays don't need to also pass the length of that array.
+
+# Loops
+
+Java is equipped with the standard set of loops: for loops, while loops.
+
+```
+for (int i = 0; i < array.length; i++) {
+  // Do something to array[i]
+}
+
+for (int value : array ) {
+  // Do something with value
+}
+
+while ( condition ) {
+  // Do something while the condition expression evaluates to true
+}
+
+do {
+  // Like a while loop, except it executes the block first
+} while (condition)
+```
