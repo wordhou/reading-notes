@@ -36,7 +36,7 @@ sudo tar xf android-studio-ide-${version}-linux.tar.gz --directory /usr/local/
 Install some packages with the package manager:
 
 ```
-sudo tar xf android-studio-ide-201.7199119-linux.tar.gz --directory /usr/local/android-studi
+sudo tar xf android-studio-ide-201.7199119-linux.tar.gz --directory /usr/local/android-studio
 ```
 
 Add `/usr/local/android-studio/bin` to `$PATH` in my `.zshrc`.
