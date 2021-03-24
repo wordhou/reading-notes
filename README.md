@@ -6,4 +6,6 @@ Here's a collection of notes for Codefellows.
 
 - [Getting setup](setup.md) with java, gradle, and android studio.
 - [Absolute basics](basics.md) about the Java language.
-
+- [Collections](collections.md) in the standard library.
+- [Exceptions](exceptions.md).
+- [File input and output](file-io.md).
