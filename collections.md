@@ -13,3 +13,5 @@ More to say here.
 A [map](https://en.wikipedia.org/wiki/Associative_array) is an abstract data type that consists of key-value pairs, where each key is paired with at most one value. At a minimum the map will support the following operations: looking up a value at a key, setting a value to a new key, removing a key-value pair, and modifying an existing value at a key.
 
 # HashMap
+
+Depending on implementation, a hash map will generally support the map operations in constant time or near constant time.
