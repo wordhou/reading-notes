@@ -2,6 +2,10 @@
 
 Here's a collection of notes for Codefellows.
 
+# General computer science knowledge
+
+- [Abstract data types](adts.md).
+
 # Code 401: Advanced Software Development in Java
 
 - [Getting setup](setup.md) with java, gradle, and android studio.
