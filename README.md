@@ -5,6 +5,8 @@ Here's a collection of notes for Codefellows.
 # General computer science knowledge
 
 - [Abstract data types](adts.md).
+- The [HTTP Request Cycle](http.md)
+-
 
 # Code 401: Advanced Software Development in Java
 
