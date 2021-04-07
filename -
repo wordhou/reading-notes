@@ -58,8 +58,6 @@ Spring Data models our data using Java classes labeled with the `@Entity` annota
 
 Integration testing allows us to verify the behavior of our application from end to end and be an important part of a testing strategy for a web application. We can perform integration testing in Spring MVC using JUnit 5. When properly configured, the testing framework will load all of the application beans into a `WebApplicationContext` object that gives us access to all of our controllers and services.
 
-## WebApplicationContext object
-
 ```java
 @Autowired
 private WebApplicationContext webApplicationContext;
@@ -67,9 +65,3 @@ private WebApplicationContext webApplicationContext;
 // gets the instance of the HelloWorldController
 webApplicationContext.getBean("HelloWorldController")
 ```
-
-## MockMVC object
-
-The MockMVC object lets us test all of our controller endpoints as well as any Spring MVC infrastructure components. I believe it simulates what Spring does when it runs a web application, loading and connecting all of the autowired components and allowing us to test any part of the system.
-
-More to come here.
