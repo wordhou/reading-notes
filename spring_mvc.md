@@ -73,3 +73,17 @@ webApplicationContext.getBean("HelloWorldController")
 The MockMVC object lets us test all of our controller endpoints as well as any Spring MVC infrastructure components. I believe it simulates what Spring does when it runs a web application, loading and connecting all of the autowired components and allowing us to test any part of the system.
 
 More to come here.
+
+# Spring Security
+
+The Spring security architecture consists of authentication and authorization. Authentication determines who a user is, and authorization determines what a user is allowed to do.
+
+## Authentication
+
+Authentication is provided by an `AuthenticationManager` interface. It exposes an `authenticate()` method that has one job. It takes an Authentication object and returns an Authentication object with `authenticated=true` if the input was successful, and it throws an `AuthenticationException` if it was invalid.
+
+The default implementation of `AuthenticationManager` is `ProviderManager`. This consults a series of `AuthenticationProvider` objects. There is a lot of configuration that can be done to set up these objects and implementations.
+
+## Authorization
+
+Authorization checks whether a user is allowed to perform an action on a resource. In Spring authorization is provided by a `AccessDecisionManager` interface. There are three different implementations provided by the framework. The interface exposes a `vote` method which takes an `Authentication` object, a generic object representing some resource the user wishes to access, and a `Collection<ConfigAttribute>`, a collection of attributes that represents the set of users or roles that are able to perform certain actions on it. These `ConfigAttributes` are often written in Spring Expression Language, which is a domain-specific language for expressing security expressions.
