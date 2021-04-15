@@ -87,3 +87,13 @@ The default implementation of `AuthenticationManager` is `ProviderManager`. This
 ## Authorization
 
 Authorization checks whether a user is allowed to perform an action on a resource. In Spring authorization is provided by a `AccessDecisionManager` interface. There are three different implementations provided by the framework. The interface exposes a `vote` method which takes an `Authentication` object, a generic object representing some resource the user wishes to access, and a `Collection<ConfigAttribute>`, a collection of attributes that represents the set of users or roles that are able to perform certain actions on it. These `ConfigAttributes` are often written in Spring Expression Language, which is a domain-specific language for expressing security expressions.
+
+# WebSockets
+
+Websockets is alternative protocol to HTTP that transfers data in both directions in real time. We can set up Websockets in a Spring MVC app using STOMP, a prototol that sits above websockets.
+
+The messages needs a representation as a Java class. The message data will actually be transmitted as a JSON object but needs to be represented as a Java object for us to work with it using STOMP. We need classes that represent both the message that the server sends to the client, and the message that the client sends to the server.
+
+Then you set up the controller much like a plain HTTP controller.
+
+On the browser end we can use various libraries for websockets, including `SockJS` with `STOMP`.
