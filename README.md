@@ -6,7 +6,6 @@ Here's a collection of notes for Codefellows.
 
 - [Abstract data types](adts.md).
 - The [HTTP Request Cycle](http.md)
--
 
 # Code 401: Advanced Software Development in Java
 
@@ -17,3 +16,4 @@ Here's a collection of notes for Codefellows.
 - [File input and output](file-io.md).
 - [Object oriented programming](oop.md) in Java, concepts and execution.
 - [SpringMVC](spring_mvc.md)
+- [Android development](android.md)
