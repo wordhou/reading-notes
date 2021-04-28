@@ -38,7 +38,7 @@ The behavior of activities and tasks can be customized by specifying defaults fo
 
 ## Intents
 
-Intents represent a user action
+Intents represent a user action...
 
 # Storing Data
 
@@ -49,3 +49,33 @@ There are many different ways to store application data in the Android platform,
 The Shared Preferences API allows apps to store data on the local device in files that represent a key-value store. Every activity has a default shared preferences file associated with it that can be requested with the `getPreferences()` method, and the app can also request and create shared preferences files by name with the `getSharedPreferences()` method.
 
 The `SharedPreferences` object itself represents a key-value store that can store `Int`s and `String`s. For more reference material on the `SharedPreferences` API, see the [API docs](https://developer.android.com/reference/android/content/SharedPreferences).
+
+# Displaying dynamic content
+
+## RecyclerView
+
+`RecyclerView` allows us to display dynamic lists of data fairly efficiently on the Android platform. Internally the `RecyclerView` maintains the view for off-screen items and reuses those views when the items come back onscreen. Since screens on mobile devices are small, reusing views that leave the screen greatly increases the performance of the app.
+
+### How to use `RecyclerView`
+
+Firstly, `RecyclerView` is a `View`. That means you add it into your layouts the exact same way you add other UI components.
+
+Then, the `RecyclerView` needs an `Adapter`. The adapter associates the data for the list with the views for the individual items. The `Adapter` tells the `RecyclerView` what items it has, how many items it has, and how to bind those items to the `ViewHolders`.
+
+The `ViewHolder` holds a view for an item in the list. The `ViewHolder` implements the logic and functionality for each list item.
+
+Finally the `RecyclerView` itself needs a `LayoutManager`, which determines the arrangement of the items in the list. The `RecyclerView` library provides several choices, for a linear list, a grid, or a staggered grid.
+
+### Implementing the Adapter
+
+The `Adapter` class needs three methods overridden:
+
+    onCreateViewHolder(ViewGroup viewGroup, int viewType): This creates a ViewHolder without any actual data bound to it.
+
+    onBindViewHolder(ViewHolder viewHolder, final int position): This method takes a list position and a ViewHolder and binds the data associated with the list item at that position to the ViewHolder.
+
+    getItemCount(): This tells RecyclerView how many items are in the data set.
+
+### Implementing the ViewHolder
+
+The `ViewHolder` will need its layout defined somewhere in an XML file. The `Adapter` then inflates this layout when its `onCreateViewHolder` method is called. The implementation of the `ViewHolder` will define the functionality and behavior of the list item.
