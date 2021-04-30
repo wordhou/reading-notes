@@ -1,11 +1,12 @@
 # Reading notes
 
-Here's a collection of notes for Codefellows.
+A collection of notes on computer science, Java programming, and Android development I took during my studies at Codefellows.
 
 # General computer science knowledge
 
 - [Abstract data types](adts.md).
 - The [HTTP Request Cycle](http.md)
+- [Data structures](data-structures.md)
 
 # Code 401: Advanced Software Development in Java
 
