@@ -112,3 +112,15 @@ Room also allows constructing more complex queries like joins with other tables.
 ## Defining the AppDatabase
 
 The `AppDatabase` object defines the database configuration and then provides access to the database access objects (DAOs) to the rest of the application. It should be used as a singleton in a single process application.
+
+# End to end testing with Espresso
+
+Espresso is a UI testing framework for Android apps. Espresso enables fast automated UI testing as a part of the development lifecycle.
+
+## Using Espresso
+
+Espresso plugs into JUnit4 and provides a way to perform UI actions on a emulated instance of Android running the app. Then it provides a set of assertions and matchers to declare assertions on the UI state after certain actions are performed.
+
+## Creating UI tests with Espresso Test Recorder
+
+One of the more power features of Espresso is generating test code by recording a test scenario. By running the Espresso Test Recorder, you can interact with an emulated Android instance, and perform UI actions, and then use the test recorder interface to declare assertions and matchers.
